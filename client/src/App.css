@@ -18,6 +18,12 @@
   color: white;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
 .register, .login, .dashboard {
   margin: 20px;
   padding: 10px;
