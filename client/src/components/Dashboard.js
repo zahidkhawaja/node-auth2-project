@@ -13,16 +13,16 @@ const Dashboard = () => {
             console.log("USERS", users);
         })
         .catch(err => console.log("Get users ERROR", err))
-    }, [])
+    }, [users])
 
     return (
         <div className = "dashboard">
             <h2>Dashboard</h2>
-            {/* {users.map(user => (
+            {users ? users.map(user => (
                 <div key = {user.id} className = "user"> 
                     <p>{user.username}</p>
                 </div>
-            ))} */}
+            )) : <div><h2>Loading...</h2></div>}
         </div>
     )
 };
