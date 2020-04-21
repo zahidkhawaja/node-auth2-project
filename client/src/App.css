@@ -18,10 +18,15 @@
   color: white;
 }
 
-.header {
+.dashcontainer {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  justify-content: center;
+}
+
+.logout {
+  width: 70px;
+  height: 30px;
+  margin: 20px;
 }
 
 .register, .login, .dashboard {

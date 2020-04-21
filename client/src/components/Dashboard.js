@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Dashboard = ({ submit }) => {
+const Dashboard = ({ setSubmit, submit }) => {
     const [users, setUsers] = useState();
 
     useEffect(() => {
@@ -17,7 +17,13 @@ const Dashboard = ({ submit }) => {
 
     return (
         <div className = "dashboard">
+            <div className = "dashcontainer">
             <h2>Dashboard</h2>
+            <button className = "logout" onClick = {() => {
+          window.localStorage.removeItem("token");
+          setUsers();
+        }}>Log Out</button>
+        </div>
             {users ? users.map(user => (
                 <div key = {user.id} className = "user"> 
                     <p>{user.username}</p>
