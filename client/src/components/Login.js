@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import axios from "axios";
 
-const Login = () => {
+const Login = ({ setSubmit, submit }) => {
 
   const { register, handleSubmit, reset } = useForm();
 
@@ -12,6 +12,7 @@ const Login = () => {
     .then(res => {
         console.log("Axios response", res.data);
         window.localStorage.setItem("token", JSON.stringify(res.data.token));
+        setSubmit(!submit);
     })
     .catch(err => console.log("Axios error", err));
     reset();

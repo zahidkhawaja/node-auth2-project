@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Dashboard = () => {
+const Dashboard = ({ submit }) => {
     const [users, setUsers] = useState();
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
             console.log("USERS", users);
         })
         .catch(err => console.log("Get users ERROR", err))
-    }, [users])
+    }, [submit])
 
     return (
         <div className = "dashboard">
@@ -22,7 +22,7 @@ const Dashboard = () => {
                 <div key = {user.id} className = "user"> 
                     <p>{user.username}</p>
                 </div>
-            )) : <div><h2>Loading...</h2></div>}
+            )) : <div></div>}
         </div>
     )
 };
