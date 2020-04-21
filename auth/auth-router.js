@@ -23,7 +23,7 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-  let { username, password } = req.body;
+  let { username, password, department } = req.body;
   // Search for the user using the username
   Users.findBy({ username })
     .then(user => {
