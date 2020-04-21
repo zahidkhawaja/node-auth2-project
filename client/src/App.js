@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <Register />
       <Login/>
+      <Dashboard />
     </div>
   );
 }

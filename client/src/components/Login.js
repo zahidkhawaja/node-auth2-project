@@ -8,14 +8,17 @@ const Login = () => {
 
   const onSubmit = data => { 
     console.log("Login data", data)
-    axios.post("http://localhost:8000/api/auth/register", data)
-    .then(res => console.log("Axios response", res))
+    axios.post("http://localhost:8000/api/auth/login", data)
+    .then(res => {
+        console.log("Axios response", res.data);
+        window.localStorage.setItem("token", JSON.stringify(res.data.token));
+    })
     .catch(err => console.log("Axios error", err));
     reset();
   }
 
   return (
-    <div>
+    <div className = "login">
       <h2>Login</h2>
     <form onSubmit={handleSubmit(onSubmit)} className = "loginform">
       <input name="username" ref={register} placeholder = "Username" />

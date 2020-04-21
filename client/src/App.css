@@ -18,6 +18,23 @@
   color: white;
 }
 
+.register, .login, .dashboard {
+  margin: 20px;
+  padding: 10px;
+}
+
+.register {
+  border: 2px solid orange;
+}
+
+.login {
+  border: 2px solid green;
+}
+
+.dashboard {
+  border: 2px solid blue;
+}
+
 h1 {
   font-size: 1.8rem;
 }
