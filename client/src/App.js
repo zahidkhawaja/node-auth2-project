@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Register from "./components/Register";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <header className="App-header">
         <h1>Client</h1>
       </header>
+      <Register />
+      <Login/>
     </div>
   );
 }
